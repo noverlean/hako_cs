@@ -1,0 +1,17 @@
+.nickname
+{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: var(--main-alt);
+    font-size: 512px;
+    font-family: 'MyCustomFont', sans-serif;
+    letter-spacing: -50px;
+    /* font-family: "Inter", serif;
+    font-family: "Scada", serif;
+    font-family: "Gothic A1", serif; */
+    font-weight: 400;
+    font-style: normal;
+    line-height: 100vh;
+}

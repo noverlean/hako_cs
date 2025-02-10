@@ -1,0 +1,28 @@
+*, *::before, *::after
+{
+    margin: 0;
+}
+
+:root
+{
+    --main: #fff;
+    --medium: #787878; 
+    --main-alt: #272727; 
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/MyCustomFont.ttf') format('truetype');
+}
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.colorMain
+{
+    background-color: var(--main);
+}

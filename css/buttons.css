@@ -1,0 +1,11 @@
+.themePicker
+{
+    width: 56px;
+    height: 56px;
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-image: url('../reference/sun.png');
+    background-size: cover;
+}

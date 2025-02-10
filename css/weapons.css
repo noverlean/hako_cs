@@ -1,0 +1,14 @@
+.ak
+{
+    width: 1569px;
+    height: 1177px;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    background-image: url('../reference/AK47.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    rotate: -43deg;
+
+    filter: drop-shadow(-48px 29px 13px #00000080) contrast(50%);
+}
