@@ -6,12 +6,21 @@
     text-align: center;
     color: var(--main-alt);
     font-size: 512px;
-    font-family: 'MyCustomFont', sans-serif;
-    letter-spacing: -50px;
-    /* font-family: "Inter", serif;
+    /* font-family: 'JejuGothic', sans-serif; */
+    letter-spacing: -65px;
     font-family: "Scada", serif;
-    font-family: "Gothic A1", serif; */
     font-weight: 400;
     font-style: normal;
     line-height: 100vh;
+}
+
+.avatar
+{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: calc(50% - 125px);
+    left: calc(50% - 125px);
+    background-color: var(--medium);
+    border-radius: 25px;
 }
