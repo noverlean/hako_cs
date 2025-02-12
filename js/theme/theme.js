@@ -1,0 +1,69 @@
+document.getElementById('themePicker').addEventListener('click', switchTheme);
+
+let currentTheme = 'day';
+// init();
+
+function init()
+{
+    if (localStorage.getItem('currentTheme') !== undefined | null)
+    {
+        currentTheme = localStorage.getItem('currentTheme');
+    }
+}
+
+function switchTheme()
+{
+    console.log(currentTheme);
+    rotateIcons();
+    switch (currentTheme)
+    {
+        case 'day':
+            currentTheme = 'night';
+            setTheme('night');
+            break;
+        case 'night':
+            currentTheme = 'day';
+            setTheme('day');
+            break;
+    }
+    
+}
+
+function setTheme(state)
+{
+    switch (state)
+    {
+        case "night":
+            document.getElementById('sun').style.opacity = '0';
+            document.getElementById('moon').style.opacity = '1';
+
+            document.documentElement.style.setProperty("--main",        "#272727");
+            document.documentElement.style.setProperty("--medium-alt",      "#141414");
+            document.documentElement.style.setProperty("--medium",      "#787878");
+            document.documentElement.style.setProperty("--main-alt",    "#fff");
+            break;
+        case "day":
+            document.getElementById('sun').style.opacity = '1';
+            document.getElementById('moon').style.opacity = '0';
+
+            document.documentElement.style.setProperty("--main",        "#fff");
+            document.documentElement.style.setProperty("--medium-alt",      "#787878");
+            document.documentElement.style.setProperty("--medium",      "#787878");
+            document.documentElement.style.setProperty("--main-alt",    "#272727");
+            break;
+    }
+}
+
+let currentRotationState = false;
+function rotateIcons()
+{
+    if (currentRotationState === true) {
+        document.getElementById('sun').style.rotate = '0deg';
+        document.getElementById('moon').style.rotate = '0deg';
+    }
+    else {
+        document.getElementById('sun').style.rotate = '255deg';
+        document.getElementById('moon').style.rotate = '255deg';
+    }
+    currentRotationState = !currentRotationState;
+}

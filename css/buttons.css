@@ -1,11 +1,45 @@
 .themePicker
 {
+    position: absolute;
     width: 56px;
     height: 56px;
-    display: block;
-    position: absolute;
     top: 25px;
     right: 25px;
-    background-image: url('../reference/sun.png');
-    background-size: cover;
+    z-index: 1;
+}
+
+.sun
+{
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    background-color: var(--main-alt);
+    mask-image: url('../reference/sun.png');
+    mask-size: cover;
+    mask-repeat: no-repeat; /* Не повторять маску */
+    mask-position: center; /* Центрировать маску */
+    -webkit-mask-image: url('../reference/sun.png'); /* Для поддержки в WebKit браузерах */
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    opacity: 1;
+    transition: all .5s linear;
+}
+
+.moon
+{
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    background-color: var(--main-alt);
+    mask-image: url('../reference/moon.png');
+    mask-size: cover;
+    mask-repeat: no-repeat; /* Не повторять маску */
+    mask-position: center; /* Центрировать маску */
+    -webkit-mask-image: url('../reference/moon.png'); /* Для поддержки в WebKit браузерах */
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    opacity: 0;
+    transition: all .5s linear;
 }

@@ -6,13 +6,9 @@
 :root
 {
     --main: #fff;
+    --medium-alt: #787878; 
     --medium: #787878; 
     --main-alt: #272727; 
-}
-
-@font-face {
-    font-family: 'MyCustomFont';
-    src: url('fonts/MyCustomFont.ttf') format('truetype');
 }
 
 body
@@ -25,4 +21,5 @@ body
 .colorMain
 {
     background-color: var(--main);
+    transition: background-color 0.5s;
 }

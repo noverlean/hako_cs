@@ -1,26 +1,39 @@
+.nicknameContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: visible;
+    position: relative;
+    width: 200vw;
+    height: 200vh;
+    top: -50vh;
+    left: -52vw;
+    white-space: nowrap; /* Запрещает перенос строк */
+    text-overflow: ellipsis; /* Добавляет троеточие в конце обрезанного текста */
+}
 .nickname
 {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
     text-align: center;
     color: var(--main-alt);
-    font-size: 512px;
-    /* font-family: 'JejuGothic', sans-serif; */
-    letter-spacing: -65px;
-    font-family: "Scada", serif;
+    transition: color 0.5s;
+    font-size: 500px;
+    letter-spacing: -75px;
+    font-family: 'JejuGothic', sans-serif;
     font-weight: 400;
     font-style: normal;
-    line-height: 100vh;
+    line-height: 60vh;
 }
 
 .avatar
 {
-    width: 250px;
-    height: 250px;
+    width: 184px;
+    height: 184px;
     position: absolute;
-    top: calc(50% - 125px);
-    left: calc(50% - 125px);
+    top: calc(50% - 92px);
+    left: calc(50% - 92px);
     background-color: var(--medium);
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 25px;
 }
