@@ -17,37 +17,58 @@ renderer.setClearColor(0x000000, 0); // Установка прозрачног�
 document.getElementById('container').appendChild(renderer.domElement);
 
 // // Свет
-const directionalLight = new THREE.DirectionalLight(0xffffff, 2.5); // Направленный свет
-directionalLight.position.set(0, 0, 1).normalize();
+const directionalLight = new THREE.DirectionalLight(0xffffff, 2); // Направленный свет
+directionalLight.position.set(-5, -2, 1).normalize();
 scene.add(directionalLight);
+
+document.addEventListener('mousemove', (e) => {
+    let xPos = (e.clientX - window.innerWidth / 2) / window.innerWidth / 2;
+    let yPos = (e.clientY - window.innerHeight / 2) / window.innerWidth / 2;
+
+    directionalLight.position.set(5 * xPos, -5 * yPos, 0.4);
+});
 
 // const pointLight = new THREE.PointLight(0xffffff, 2, 100); // Точечный свет
 // // pointLight.position.set(-2, -2, 5);
 // pointLight.position.set(0, 0, 2);
 // scene.add(pointLight);
 
-// Загрузка модели
 const loader = new THREE.GLTFLoader();
 loader.load('../reference/3D_Models/ak47_counter_strike_2.glb', function (gltf) {
     const model = gltf.scene;
+
+    // Устанавливаем материал модели с использованием MeshStandardMaterial
+    // model.traverse((child) => {
+    //     if (child.isMesh) {
+    //         const originalPosition = child.position.clone();
+    //         const originalRotation = child.rotation.clone();
+            
+    //         child.material = new THREE.MeshStandardMaterial({
+    //             color: 0x555555, // Основной цвет объекта (можете изменить)
+    //             roughness: 0.5, // Шероховатость (значение по умолчанию)
+    //             metalness: 0.5, // Металличность (значение по умолчанию)
+    //             emissive: 0x000000, // Эмиссия (черный цвет)
+    //         });
+
+    //         child.position.copy(originalPosition);
+    //         child.rotation.copy(originalRotation);
+    //     }
+    // });
+
     scene.add(model);
 
-    // Анимация вращения модели
-    // function animate() {
-    //     requestAnimationFrame(animate);
-
-    //     model.rotation.z += 0.01; // Вращение модели
-
-    //     renderer.render(scene, camera);
-    // }
-    // animate();
     model.rotation.order = 'YXZ';
     model.rotation.set(THREE.Math.degToRad(43), THREE.Math.degToRad(-90), THREE.Math.degToRad(-10));
 
     model.position.set(0.55, 0.42, 0);
     model.scale.set(2.7, 2.7, 2.7);
-    
-    renderer.render(scene, camera);
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        gsap.to(model.position, { duration: 0, y: scrollY * -0.001 });
+    });
+
+    // animate();
 }, undefined, function (error) {
     console.error('An error occurred:', error);
 });
@@ -60,3 +81,9 @@ window.addEventListener('resize', () => {
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
 });
+
+function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+}
+animate();

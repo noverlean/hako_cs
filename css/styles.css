@@ -9,13 +9,15 @@
     --medium-alt: #787878; 
     --medium: #787878; 
     --main-alt: #272727; 
+
+    --test-color: #6f00ff;
 }
 
 body
 {
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    height: 200vh;
+    overflow-x: hidden;
 }
 
 .colorMain

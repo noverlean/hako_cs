@@ -24,6 +24,6 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
-    filter: grayscale(100) contrast(.7);
+    height: 200vh;
+    filter: grayscale(100);
 }
