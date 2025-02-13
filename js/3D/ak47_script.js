@@ -63,10 +63,10 @@ loader.load('../reference/3D_Models/ak47_counter_strike_2.glb', function (gltf) 
     model.position.set(0.55, 0.42, 0);
     model.scale.set(2.7, 2.7, 2.7);
 
-    window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        gsap.to(model.position, { duration: 0, y: scrollY * -0.001 });
-    });
+    // window.addEventListener('scroll', () => {
+    //     const scrollY = window.scrollY;
+    //     gsap.to(model.position, { duration: 0, y: scrollY * -0.001 });
+    // });
 
     // animate();
 }, undefined, function (error) {

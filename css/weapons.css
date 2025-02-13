@@ -25,5 +25,5 @@
     left: 0;
     width: 100vw;
     height: 200vh;
-    filter: grayscale(100);
+    filter: grayscale(100) contrast(0.9);
 }
