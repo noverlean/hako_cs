@@ -38,8 +38,8 @@ function setTheme(state)
             document.getElementById('moon').style.opacity = '1';
 
             document.documentElement.style.setProperty("--main",        "#272727");
-            document.documentElement.style.setProperty("--medium-alt",      "#141414");
-            document.documentElement.style.setProperty("--medium",      "#787878");
+            document.documentElement.style.setProperty("--main-sub",  "#111111");
+            document.documentElement.style.setProperty("--medium",      "#686868");
             document.documentElement.style.setProperty("--main-alt",    "#fff");
             break;
         case "day":
@@ -47,8 +47,8 @@ function setTheme(state)
             document.getElementById('moon').style.opacity = '0';
 
             document.documentElement.style.setProperty("--main",        "#fff");
-            document.documentElement.style.setProperty("--medium-alt",      "#787878");
-            document.documentElement.style.setProperty("--medium",      "#787878");
+            document.documentElement.style.setProperty("--main-sub",  "#f1f1f1");
+            document.documentElement.style.setProperty("--medium",      "#686868");
             document.documentElement.style.setProperty("--main-alt",    "#272727");
             break;
     }

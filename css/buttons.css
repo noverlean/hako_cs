@@ -1,6 +1,6 @@
 .themePicker
 {
-    position: absolute;
+    position: fixed;
     width: 56px;
     height: 56px;
     top: 25px;
@@ -10,7 +10,7 @@
 
 .sun
 {
-    position: absolute;
+    position: fixed;
     width: 56px;
     height: 56px;
     background-color: var(--main-alt);
@@ -28,7 +28,7 @@
 
 .moon
 {
-    position: absolute;
+    position: fixed;
     width: 56px;
     height: 56px;
     background-color: var(--main-alt);
