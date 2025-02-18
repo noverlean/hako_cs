@@ -11,23 +11,24 @@ function generateUrl(userProfileId = d.userProfileId)
 // https://cors-anywhere.herokuapp.com/
 async function getUserProfile()
 {
-    let url = generateUrl();
-    const response = await fetch(url, {
-        method: "GET", // *GET, POST, PUT, DELETE, etc.
-        mode: "cors", // no-cors, *cors, same-origin
-        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-        headers: {
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-            "Content-Type": "application/json",
-            // "Access-Control-Allow-Origin": "http://127.0.0.1",
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        // referrerPolicy: "strict-origin-when-cross-origin", // no-referrer, *client
-        // body: JSON.stringify(data), // body data type must match "Content-Type" header
-    });
+    // let url = generateUrl();
+    // const response = await fetch(url, {
+    //     method: "GET", // *GET, POST, PUT, DELETE, etc.
+    //     mode: "cors", // no-cors, *cors, same-origin
+    //     cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    //     headers: {
+    //         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    //         "Content-Type": "application/json",
+    //         // "Access-Control-Allow-Origin": "http://127.0.0.1",
+    //         // 'Content-Type': 'application/x-www-form-urlencoded',
+    //     },
+    //     // referrerPolicy: "strict-origin-when-cross-origin", // no-referrer, *client
+    //     // body: JSON.stringify(data), // body data type must match "Content-Type" header
+    // });
 
-    return await response.json();
-    // return {"response":{"players":[{"steamid":"76561199095238169","communityvisibilitystate":3,"profilestate":1,"personaname":"-HAKO","commentpermission":1,"profileurl":"https://steamcommunity.com/id/ha_ko/","avatar":"https://avatars.steamstatic.com/ea5ddb514a41d18fd6076e4b37f22639e8cb36bd.jpg","avatarmedium":"https://avatars.steamstatic.com/ea5ddb514a41d18fd6076e4b37f22639e8cb36bd_medium.jpg","avatarfull":"https://avatars.steamstatic.com/ea5ddb514a41d18fd6076e4b37f22639e8cb36bd_full.jpg","avatarhash":"ea5ddb514a41d18fd6076e4b37f22639e8cb36bd","lastlogoff":1739307674,"personastate":0,"primaryclanid":"103582791472765557","timecreated":1601578155,"personastateflags":0}]}};
+    // return await response.json();
+    let str = `{"steamid":"76561199095238169","personaname":"-HAKO","accountname":"ha_ko","profileurl":"ha_ko","profilesteamurl":"https://steamcommunity.com/id/ha_ko","avatarhash":"ea5ddb514a41d18fd6076e4b37f22639e8cb36bd","avatar":"https://avatars.fastly.steamstatic.com/ea5ddb514a41d18fd6076e4b37f22639e8cb36bd.jpg","avatarmedium":"https://avatars.fastly.steamstatic.com/ea5ddb514a41d18fd6076e4b37f22639e8cb36bd_medium.jpg","avatarfull":"https://avatars.fastly.steamstatic.com/ea5ddb514a41d18fd6076e4b37f22639e8cb36bd_full.jpg","realname":null,"communityvisibilitymessage":"public","communityvisibilitystate":3,"profilestate":1,"onlinestate":"offline","ingameinfo":[],"timecreated":1601510400,"timecreatedat":"2020-10-01T00:00:00+00:00","location":null,"loccountrycode":null,"summary":"Эстрада такова, что кто-то берет в ротик, дальше в зад.","vac":0,"islimited":0,"mostplayedgamestotalplaytime":2312,"mostplayedgames2weeksplaytime":45.4,"mostplayedgamesappids":[730],"mostplayedgames":[{"gamename":"Counter-Strike 2","gamelink":"https://steamcommunity.com/app/730","appid":730,"gameicon":"https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/730/8dbc71957312bbd3baea65848b545be9eae2a355.jpg","gamelogo":"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/730/capsule_184x69.jpg?t=1729703045","gamelogosmall":"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/730/capsule_184x69.jpg?t=1729703045","playtimelast2weeks":45.4,"hoursonrecord":2312,"statsname":"CSGO"}],"mostplayedgamestimes":[{"appid":730,"playtimelast2weeks":45.4,"hoursonrecord":2312}]}`;
+    return JSON.parse(str);
 }
 
 async function getPlayTime()

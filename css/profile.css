@@ -14,9 +14,13 @@
 }
 .nickname
 {
+    position: fixed;
+    top: calc(50vh - 500px / 2);
+    width: 100vw;
     text-align: center;
     color: var(--main-alt);
-    transition: color 0.5s;
+    transition: color .5s;
+    transition: all .5s;
     font-size: 500px;
     letter-spacing: -75px;
     font-family: 'JejuGothic', sans-serif;
@@ -29,13 +33,14 @@
 {
     width: 184px;
     height: 184px;
-    position: absolute;
+    position: fixed;
     top: calc(50% - 92px);
     left: calc(50% - 92px);
     background-color: var(--medium);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 25px;
+    transition: all .5s;
 }
 
 .bottomFog
@@ -50,7 +55,7 @@
 
 .profilePanel
 {
-    position: absolute;
+    position: fixed;
     top: 100vh;
     display: block;
     height: 70vh;
@@ -61,11 +66,11 @@
     transition: all .5s linear;
 }
 
-.topLine 
+.topLine
 {
     display: flex;
-    margin: 20px;
-    margin-left: calc(184px + 25px * 2);
+    margin: 2vh;
+    height: 2vh;
     align-items: center;
     justify-content: space-between;
 }
@@ -84,14 +89,14 @@
     margin-left: 5px;
     font-size: 18px;
     letter-spacing: -1px;
-    line-height: 25px;
+    line-height: 2vh;
     color: var(--medium);
 }
 
 .topLineIcon 
 {
-    width: 20px;
-    height: 20px;
+    width: 2vh;
+    height: 2vh;
     background-color: var(--medium);
     mask-size: cover;
     mask-repeat: no-repeat; /* Не повторять маску */
@@ -109,7 +114,32 @@
 
 .location
 {
-    width: 25px;
+    width: 2vh;
     mask-image: url('../reference/placement.png');
     -webkit-mask-image: url('../reference/placement.png'); /* Для поддержки в WebKit браузерах */
+}
+
+.steamLink
+{
+    width: 3vh;
+    height: 3vh;
+    background-color: var(--medium);
+    mask-size: cover;
+    mask-repeat: no-repeat; /* Не повторять маску */
+    mask-position: center; /* Центрировать маску */
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url('../reference/steam.png');
+    -webkit-mask-image: url('../reference/steam.png');
+}
+
+.tikTokContainer
+{
+    width: auto;
+    height: calc(70vh - 2vh - 2vh - 2vh * 2);
+    margin: 2vh;
+    background-color: var(--main);
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Применяем размытие */
 }

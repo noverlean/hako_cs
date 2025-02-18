@@ -1,8 +1,8 @@
 .themePicker
 {
     position: fixed;
-    width: 56px;
-    height: 56px;
+    width: 50px;
+    height: 50px;
     top: 25px;
     right: 25px;
     z-index: 1;
@@ -11,8 +11,8 @@
 .sun
 {
     position: fixed;
-    width: 56px;
-    height: 56px;
+    width: 50px;
+    height: 50px;
     background-color: var(--main-alt);
     mask-image: url('../reference/sun.png');
     mask-size: cover;
@@ -29,8 +29,8 @@
 .moon
 {
     position: fixed;
-    width: 56px;
-    height: 56px;
+    width: 50px;
+    height: 50px;
     background-color: var(--main-alt);
     mask-image: url('../reference/moon.png');
     mask-size: cover;

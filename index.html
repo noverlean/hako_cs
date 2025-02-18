@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body class="colorMain">
-    <div id="pageLoader" class="pageLoader"></div>
+    <!-- <div id="pageLoader" class="pageLoader"></div> -->
 
     <div id="themePicker" class="themePicker">
         <div id="sun" class="sun"></div>
@@ -26,14 +26,14 @@
     <div class="bottomFog"></div>
     <!-- <div class="ak"></div> -->
     <div id="container"></div>
-    <div class="nicknameContainer">
-        <div id="nickname" class="nickname">...</div>
-    </div>
+    <div id="nickname" class="nickname">...</div>
     <div id="avatar" class="avatar"></div>
 
-    <main class="profilePanel">
+    <main id="profilePanel" class="profilePanel">
         <div id="topLine" class="topLine">
-            
+            <div id="steamLink" class="steamLink"></div>
+        </div>
+        <div id="tikTokContainer" class="tikTokContainer">
         </div>
     </main>
     
@@ -47,6 +47,7 @@
     <script src="./js/steamApiDriver.js"></script>
 
     <script src="./js/3D/_config.js"></script>
+    <script src="./js/tikTokConfig.js"></script>
     <script type="module" defer src="./js/3D/weapon_script.js"></script>
 
     <script src="./js/theme/theme.js"></script>

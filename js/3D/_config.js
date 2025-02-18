@@ -1,5 +1,5 @@
 var weaponConfig = {
-    currentId: 6,
+    currentId: 2,
     list: [
         {
             weaponName: "ak-47",

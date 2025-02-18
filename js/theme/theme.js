@@ -1,13 +1,15 @@
 document.getElementById('themePicker').addEventListener('click', switchTheme);
 
 let currentTheme = 'day';
-// init();
+let currentRotationState = false;
+init();
 
 function init()
 {
-    if (localStorage.getItem('currentTheme') !== undefined | null)
+    if (localStorage.getItem('currentTheme') != undefined)
     {
         currentTheme = localStorage.getItem('currentTheme');
+        setTheme(currentTheme);
     }
 }
 
@@ -20,10 +22,12 @@ function switchTheme()
         case 'day':
             currentTheme = 'night';
             setTheme('night');
+            localStorage.setItem('currentTheme', 'night');
             break;
         case 'night':
             currentTheme = 'day';
             setTheme('day');
+            localStorage.setItem('currentTheme', 'day');
             break;
     }
     
@@ -54,7 +58,6 @@ function setTheme(state)
     }
 }
 
-let currentRotationState = false;
 function rotateIcons()
 {
     if (currentRotationState === true) {

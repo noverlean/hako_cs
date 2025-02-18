@@ -1,36 +1,19 @@
-/* Общие стили для всех скроллбаров */
-.custom-scrollbar::-webkit-scrollbar {
-    width: 12px; /* Ширина вертикального скроллбара */
-    height: 12px; /* Высота горизонтального скроллбара */
-}
-
-/* Стили для трека (фона) скроллбара */
-.custom-scrollbar::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Цвет фона */
-    border-radius: 10px; /* Скругление углов */
-    margin-right: 20px; /* Отступ от правой стороны */
-}
-
-/* Стили для ползунка (thumb) скроллбара */
-.custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #888; /* Цвет ползунка */
-    border-radius: 10px; /* Скругление углов */
-}
-
-/* Стили для ползунка при наведении */
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Цвет ползунка при наведении */
-}
-
-/* Отступ скроллбара от правой стороны */
-.custom-scrollbar::after {
-    content: '';
-    display: block;
-    width: 20px; /* Ширина отступа */
-    height: 100%; 
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: transparent; /* Прозрачный фон */
-    pointer-events: none; /* Убирает возможность взаимодействия с этим элементом */
-}
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f100;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
