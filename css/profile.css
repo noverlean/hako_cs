@@ -63,7 +63,7 @@
     margin: 15vh 15vw;
     background-color: var(--main-sub);
     border-radius: 25px;
-    transition: all .5s linear;
+    transition: all .4s linear;
 }
 
 .topLine
@@ -141,5 +141,30 @@
     margin: 2vh;
     background-color: var(--main);
     border-radius: 10px;
-    backdrop-filter: blur(10px); /* Применяем размытие */
+}
+
+.tikTokVideo
+{
+    width: 20vh;
+    height: 30vh;
+    background-color: var(--main-sub);
+    border-radius: 10px;
+    color: var(--main-alt);
+}
+
+.tikTokVideo_mask
+{
+    width: 20vh;
+    height: 25vh;
+    background-image: linear-gradient(var(#00000000), var(--main-sub));
+    border-radius: 10px;
+    z-index: 1;
+}
+.tikTokVideo_image
+{
+    width: 20vh;
+    height: 25vh;
+    background-color: var(--main-alt);
+    border-radius: 10px;
+    z-index: 1;
 }
