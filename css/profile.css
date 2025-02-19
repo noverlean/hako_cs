@@ -58,7 +58,6 @@
     position: fixed;
     top: 100vh;
     display: block;
-    height: 70vh;
     width: 70vw;
     margin: 15vh 15vw;
     background-color: var(--main-sub);
@@ -134,37 +133,74 @@
     -webkit-mask-image: url('../reference/steam.png');
 }
 
-.tikTokContainer
+.stats
 {
-    width: auto;
-    height: calc(70vh - 2vh - 2vh - 2vh * 2);
-    margin: 2vh;
-    background-color: var(--main);
-    border-radius: 10px;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s linear;
+}
+
+.tikTok
+{
+    position: absolute;
+    top: 225vh;
+    margin: 0vh 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    height: 70vh;
+    background-color: #00000099;
+    border-radius: 25px;
+}
+
+.tikTokVideoContainer
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 0vw;
+    height: 60vh;
+    margin-top: 5vh;
+    left: 0vw;
 }
 
 .tikTokVideo
 {
-    width: 20vh;
-    height: 30vh;
-    background-color: var(--main-sub);
-    border-radius: 10px;
+    width: 5vh;
+    height: 1vh;
+    background-color: #000000;
     color: var(--main-alt);
+    overflow: hidden;
+    z-index: 1;
+    transition: background-color .7s cubic-bezier(.75,0,0,1), 
+        width .7s ease-out, 
+        margin .7s cubic-bezier(.75,-2,0,1),
+        border-radius .7s cubic-bezier(0,1,1,0);
+    margin: 0vh 5vh 0vh 0vh;
+    opacity: .7;
+    border-radius: 1vh 0vh 0vh 1vh;
+}
+.tikTokVideo:nth-child(2n)
+{
+    left: 0;
+}
+.tikTokVideo:nth-child(2n+1)
+{
+    right: 0;
 }
 
-.tikTokVideo_mask
+.tikTokViewer
 {
-    width: 20vh;
-    height: 25vh;
-    background-image: linear-gradient(var(#00000000), var(--main-sub));
-    border-radius: 10px;
-    z-index: 1;
-}
-.tikTokVideo_image
-{
-    width: 20vh;
-    height: 25vh;
-    background-color: var(--main-alt);
-    border-radius: 10px;
-    z-index: 1;
+    width: 20vw;
+    height: 50vh;
+    border-radius: 15px;
+    position: relative;
+    background-color: var(--main-sub);
 }

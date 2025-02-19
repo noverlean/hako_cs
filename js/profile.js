@@ -9,9 +9,9 @@ loadUserProfile()
 async function loadUserProfile()
 {
     let userProfile = await getUserProfile();
+    let faceitProfile = await getFaceitData();
 
     console.log(userProfile);
-    
 
     document.getElementById('avatar').style.backgroundImage = `url(${userProfile.avatarfull})`;
     document.getElementById('nickname').innerText = userProfile.personaname;
@@ -67,36 +67,20 @@ function showPageLoader()
     // document.getElementById('pageLoader').style.backgroundImage = `url('./reference/anim.gif')`;
 }
 
-document.addEventListener('scroll', function() {
-    const scrollPosition = window.scrollY;
+// document.addEventListener('scroll', function() {
+//     const scrollPosition = window.scrollY;
 
-    const nickname = document.getElementById('nickname');
-    const avatar = document.getElementById('avatar');
-    const profilePanel = document.getElementById('profilePanel');
+//     const nickname = document.getElementById('nickname');
+//     const avatar = document.getElementById('avatar');
+//     const profilePanel = document.getElementById('profilePanel');
+//     const stats = document.getElementById('stats');
+//     console.log(scrollPosition);
 
-    if (scrollPosition > 0) {
-        nickname.style.top = '-200px';
-        nickname.style.width = '100vw';
-        nickname.style.fontSize = '100px';
-        nickname.style.letterSpacing = '-15px';
+//     // if (scrollPosition == 0) {
+        
+//     // } else if (scrollPosition <= 100) {
+        
+//     // } else if (scrollPosition <= 200) {
 
-        avatar.style.top = '25px';
-        avatar.style.left = '25px';
-        avatar.style.width = '80px';
-        avatar.style.height = '80px';
-
-        profilePanel.style.top = '0vh';
-    } else {
-        nickname.style.top = 'calc(50vh - 500px / 2)';
-        nickname.style.width = '100vw';
-        nickname.style.fontSize = '500px';
-        nickname.style.letterSpacing = '-75px';
-
-        avatar.style.top = 'calc(50% - 92px)';
-        avatar.style.left = 'calc(50% - 92px)';
-        avatar.style.width = '184px';
-        avatar.style.height = '184px';
-
-        profilePanel.style.top = '100vh';
-    }
-});
+//     // }
+// });
