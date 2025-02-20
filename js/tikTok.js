@@ -72,6 +72,8 @@ async function fillTikToks()
 // style="background-image: url('${videoData.thumbnail_url}');"
 let activeVideo = null;
 let tikTokViewer = document.getElementById('tikTokViewer');
+let tikTokTitle = document.getElementById('tikTokTitle');
+let videoIdLast = -1;
 function showTikTok(videoId)
 {
     let newVideo;
@@ -89,5 +91,28 @@ function showTikTok(videoId)
     newVideo.style.backgroundColor = 'var(--main)';
     activeVideo = newVideo;
 
-    tikTokViewer.backgroundImage = `url('${}')`;
+    tikTokViewer.style.height = '50vh';
+    
+    if (videoId > videoIdLast)
+    {
+        tikTokViewer.style.transform = 'rotate3d(1, 0, 0, 90deg)';
+    }
+    else
+    {
+        tikTokViewer.style.transform = 'rotate3d(1, 0, 0, -90deg)';
+    }
+    tikTokTitle.style.lineHeight = '5';
+    setTimeout(() => {
+        tikTokViewer.style.transform = 'rotate3d(1, 0, 0, 0deg)';
+        tikTokViewer.style.backgroundImage = `url('${tikTokConfig.responses[videoId].thumbnail_url}')`;
+        tikTokTitle.innerText = tikTokConfig.responses[videoId].title.substring(0, tikTokConfig.responses[videoId].title.indexOf('#'));
+        tikTokTitle.style.lineHeight = '1';
+    }, 200);
+
+    scrollLocked = true;
+    setTimeout(() => {
+        scrollLocked = false;
+    }, 400);
+
+    videoIdLast = videoId;
 }

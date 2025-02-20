@@ -1,5 +1,3 @@
-window.scrollBy(0, 0);
-
 //объект, отвечающий за наличие на страницах этажей прокруток и управление текущими этажами
 let floors = {
     count: 2,
@@ -117,6 +115,7 @@ window.addEventListener('scroll', () => {
 });
 
 let previousPos = 0;
+var scrollLocked = false;
 function onWheel(e) {
     e = e || window.event;
 
@@ -126,13 +125,16 @@ function onWheel(e) {
     //отменяем автоматическую браузерную прокрутку
     e.preventDefault();
 
-    if (delta < 50)
+    if (!scrollLocked)
     {
-        scrollToFloor(floors.current - 1);
-    }
-    else if (delta > 50)
-    {
-        scrollToFloor(floors.current + 1);
+        if (delta < 50)
+        {
+            scrollToFloor(floors.current - 1);
+        }
+        else if (delta > 50)
+        {
+            scrollToFloor(floors.current + 1);
+        }
     }
 }
 
@@ -168,3 +170,5 @@ function scrollToFloor(floorId)
     previousPos = window.scrollY;
     lockedByWheel = false;
 }
+
+scrollToFloor(0);
