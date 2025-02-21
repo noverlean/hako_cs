@@ -165,9 +165,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 0vw;
-    height: 60vh;
-    margin-top: 5vh;
+    width: 5vw;
+    height: 45vh;
+    padding: 20vh 0;
+    top: 215vh; 
     left: 0vw;
 }
 
@@ -185,7 +186,7 @@
         border-radius .7s cubic-bezier(0,1,1,0);
     margin: 0vh 5vh 0vh 0vh;
     opacity: .7;
-    border-radius: 1vh 0vh 0vh 1vh;
+    border-radius: 1vh;
 }
 .tikTokVideo:nth-child(2n)
 {

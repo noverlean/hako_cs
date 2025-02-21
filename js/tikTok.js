@@ -80,15 +80,15 @@ function showTikTok(videoId)
     if (activeVideo !== null)
     {
         activeVideo.style.margin = '0vh 5vh 0vh 0vh';
-        activeVideo.style.borderRadius = '1vh 0vh 0vh 1vh';
+        activeVideo.style.borderRadius = '1vh';
         activeVideo.style.width = '5vh';
         activeVideo.style.backgroundColor = '#000000';
     }
     newVideo = document.getElementById(`tikTokVideo${videoId}`);
     newVideo.style.margin = '0vh 0vh 0vh 10vh';
-    newVideo.style.borderRadius = '0vh 1vh 1vh 0vh';
+    newVideo.style.borderRadius = '1vh';
     newVideo.style.width = '10vh';
-    newVideo.style.backgroundColor = 'var(--main)';
+    newVideo.style.backgroundColor = 'var(--main-alt)';
     activeVideo = newVideo;
 
     tikTokViewer.style.height = '50vh';

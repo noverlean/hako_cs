@@ -1,5 +1,5 @@
 var weaponConfig = {
-    currentId: 2,
+    currentId: Math.round(Math.random() * 6),
     list: [
         {
             weaponName: "ak-47",
