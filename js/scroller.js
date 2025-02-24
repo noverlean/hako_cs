@@ -29,7 +29,6 @@ let floors = {
         const nickname = document.getElementById('nickname');
         const avatar = document.getElementById('avatar');
         const profilePanel = document.getElementById('profilePanel');
-        const stats = document.getElementById('stats');
 
         switch (this.current)
         {
@@ -58,8 +57,6 @@ let floors = {
                 avatar.style.height = '80px';
         
                 profilePanel.style.top = '10vh';
-        
-                stats.style.height = '50vh';
                 break;
             case 2:
             default:
@@ -77,7 +74,6 @@ let floors = {
             
                     profilePanel.style.top = '-1vh';
             
-                    stats.style.height = '0vh'; 
                     console.log(this.current, this.count);
     
                     showTikTok(this.current - 2);
